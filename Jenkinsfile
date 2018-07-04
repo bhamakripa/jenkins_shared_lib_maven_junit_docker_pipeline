@@ -1,3 +1,5 @@
+#!groovy
+
 /* import shared library */
 @Library('jenkins_shared_lib_mvn_docker')
 
@@ -22,8 +24,8 @@ node() {
 		string(name: 'defines', defaultValue: '', description: 'Additional properties.', trim: true),
 		
 		booleanParam(name: 'logSuccessfulMavenTransfers', defaultValue: false, description: 'configures maven to log successful downloads. This is set to false by default to reduce the noise in build logs.') 
-			
-			])	
+		])	
+		
 		])	
 		   
 	    stage('Checkout Pipeline and shared Library') {
